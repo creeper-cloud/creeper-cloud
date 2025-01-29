@@ -5,41 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creeper Cloud</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <i class="fas fa-bomb"></i> <!-- Creeper icon -->
             <h1>Creeper Cloud</h1>
-        </header>
+        </div>
+        <div class="header-buttons">
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</header>
 
         <main>
-            <!-- Manhua Section -->
-            <section class="card">
-                <h2>1 Manhua Scan</h2>
-                <p>Latest translated manhua updates</p>
-                <div class="button-group">
-                    <a href="#" class="button primary">Read Now</a>
-                    <a href="#" class="button discord">Join Community</a>
-                </div>
-            </section>
+           <!-- Manhua Scan Section -->
+<section class="card">
+    <div class="card-header">
+        <i class="fas fa-book-open"></i>
+        <h2>1 Manhua Scan</h2>
+    </div>
+    <p>Latest translated manhua updates</p>
+    <div class="button-group">
+        <a href="#" class="button primary">
+            <i class="fas fa-book-reader"></i> Read Now
+        </a>
+        <a href="#" class="button discord">
+            <i class="fab fa-discord"></i> Join Community
+        </a>
+    </div>
+</section>
 
-            <!-- Hosting Section -->
-            <section class="card">
-                <h2>2 Hosting Services</h2>
-                <div class="service-grid">
-                    <a href="#" class="service-item">Windows VPS</a>
-                    <a href="#" class="service-item">Ubuntu VPS</a>
-                    <a href="#" class="service-item">Minecraft Hosting</a>
-                </div>
-                <a href="#" class="button">Technical Support</a>
-            </section>
+<!-- Hosting Services -->
+<section class="card">
+    <div class="card-header">
+        <i class="fas fa-server"></i>
+        <h2>2 Hosting Services</h2>
+    </div>
+    <div class="service-grid">
+        <a href="#" class="service-item">
+            <i class="fab fa-windows"></i> Windows VPS
+        </a>
+        <a href="#" class="service-item">
+            <i class="fab fa-ubuntu"></i> Ubuntu VPS
+        </a>
+        <a href="#" class="service-item">
+            <i class="fas fa-cube"></i> Minecraft Hosting
+        </a>
+    </div>
+    <a href="#" class="button support">
+        <i class="fas fa-headset"></i> Technical Support
+    </a>
+</section>
 
-            <!-- Coming Soon -->
-            <section class="card">
-                <h2>3 Coming Soon</h2>
-                <p>New services exploding soon!</p>
-                <a href="#" class="button">Get Updates</a>
-            </section>
+<!-- Coming Soon -->
+<section class="card">
+    <div class="card-header">
+        <i class="fas fa-hourglass-half"></i>
+        <h2>3 Coming Soon</h2>
+    </div>
+    <p>New services exploding soon!</p>
+    <a href="#" class="button primary">
+        <i class="fas fa-bell"></i> Get Updates
+    </a>
+</section>
         </main>
 
         <footer>
@@ -50,5 +84,16 @@
             </div>
         </footer>
     </div>
+    <script>
+    // Dark Mode Toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        themeToggle.querySelector('i').classList.toggle('fa-moon');
+        themeToggle.querySelector('i').classList.toggle('fa-sun');
+    });
+</script>
 </body>
 </html>
