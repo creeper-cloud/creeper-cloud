@@ -1,19 +1,4 @@
-/* styles.css */
-:root {
-    --primary-color: #5865F2;
-    --accent-color: #00aa00;
-    --background-color: #ffffff;
-    --text-color: #2d2d2d;
-    --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    --hover-transition: all 0.3s ease;
-}
-
-.dark-mode {
-    --background-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --card-shadow: 0 2px 12px rgba(255,255,255,0.05);
-}
-
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -21,250 +6,84 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
+    padding: 20px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px 0;
+    background: #f5f5f5;
 }
 
-/* Header Styles */
-.main-header {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #2c3e50;
 }
 
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.branding {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.creeper-icon {
-    width: 32px;
-    height: 32px;
-    background-color: var(--accent-color);
-    position: relative;
-    border: 2px solid #000;
-    border-radius: 4px;
-}
-
-.creeper-icon::before,
-.creeper-icon::after {
-    content: '';
-    position: absolute;
-    background: #000;
-}
-
-.creeper-icon::before {
-    width: 8px;
-    height: 8px;
-    top: 6px;
-    left: 6px;
-    border-radius: 2px;
-}
-
-.creeper-icon::after {
-    width: 8px;
-    height: 8px;
-    top: 6px;
-    right: 6px;
-    border-radius: 2px;
-}
-
-/* Service Cards */
-.service-card {
-    background: var(--background-color);
+.service {
+    background: white;
     padding: 2rem;
-    border-radius: 8px;
     margin: 1.5rem 0;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.service-card:hover {
-    transform: translateY(-3px);
+h2 {
+    color: #5865F2;
+    margin-bottom: 1rem;
 }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.card-header i {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-}
-
-/* Buttons & Interactions */
-.button-group {
+.buttons {
     display: flex;
     gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.action-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
+.btn {
     padding: 0.8rem 1.5rem;
-    border-radius: 6px;
     text-decoration: none;
-    transition: var(--hover-transition);
+    border-radius: 5px;
+    transition: transform 0.2s;
 }
 
-.read-btn {
-    background-color: var(--accent-color);
+.btn.discord {
+    background: #5865F2;
     color: white;
 }
 
-.discord-btn {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.action-btn:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-}
-
-/* Service Items with Platform Colors */
-.service-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin: 1.5rem 0;
+.services-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
 .service-item {
     padding: 1rem;
-    border-radius: 6px;
-    background: rgba(88,101,242,0.1);
-    color: var(--text-color);
+    background: #f8f9fa;
+    border-radius: 5px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: var(--hover-transition);
+    color: #2c3e50;
+    transition: transform 0.2s;
 }
 
-.service-item i {
-    transition: color 0.3s ease;
-}
-
-.service-item.windows:hover {
-    background: #0078d4 !important;
-    color: white !important;
-}
-
-.service-item.ubuntu:hover {
-    background: #dd4814 !important;
-    color: white !important;
-}
-
-.service-item.minecraft:hover {
-    background: #00aa00 !important;
-    color: white !important;
-}
-
-.service-item:hover {
-    transform: translateX(5px);
-}
-
-/* Dark Mode Toggle */
-.theme-btn {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.theme-btn:hover {
-    transform: rotate(15deg);
-}
-
-/* Footer Styles */
-.main-footer {
-    padding: 2rem 0;
+footer {
+    text-align: center;
     margin-top: 3rem;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    color: #666;
 }
 
-.main-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-links {
+    margin-top: 1rem;
 }
 
-.main-footer a {
-    color: var(--text-color);
+.footer-links a {
+    margin: 0 1rem;
+    color: #5865F2;
     text-decoration: none;
-    margin-left: 1.5rem;
-    transition: color 0.3s ease;
 }
 
-.main-footer a:hover {
-    color: var(--primary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    
-    .button-group {
-        flex-direction: column;
-    }
-    
-    .service-card {
-        padding: 1.5rem;
-    }
-    
-    .main-footer .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .main-footer nav {
-        margin-top: 1rem;
-    }
-    
-    .service-item {
-        padding: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .branding h1 {
-        font-size: 1.5rem;
-    }
-    
-    .card-header i {
-        font-size: 1.5rem;
-    }
-    
-    .action-btn {
-        width: 100%;
-        justify-content: center;
-    }
+/* Hover Effects */
+.btn:hover, .service-item:hover {
+    transform: translateY(-2px);
 }
