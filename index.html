@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creeper - Professional hosting services and manga scans">
+    <title>Creeper Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Creeper Head Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="branding">
+                <div class="creeper-icon"></div>
+                <h1>Creeper</h1>
+            </div>
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Manhua Scan Section -->
+        <section class="service-card">
+            <div class="card-header">
+                <i class="fas fa-scroll"></i>
+                <h2>Manhua Scan</h2>
+            </div>
+            <p>Latest translated manhua updates</p>
+            <div class="button-group">
+                <a href="#" class="action-btn read-btn">
+                    <i class="fas fa-book-open"></i> Read Now
+                </a>
+                <a href="DISCORD_LINK_1" class="action-btn discord-btn">
+                    <i class="fab fa-discord"></i> Join Community
+                </a>
+            </div>
+        </section>
+
+        <!-- VPS & Hosting Section -->
+        <section class="service-card">
+            <div class="card-header">
+                <i class="fas fa-server"></i>
+                <h2>Hosting Services</h2>
+            </div>
+            <div class="service-list">
+                <a href="#" class="service-item">
+                    <i class="fab fa-windows"></i>
+                    Windows VPS
+                </a>
+                <a href="#" class="service-item">
+                    <i class="fab fa-ubuntu"></i>
+                    Ubuntu VPS
+                </a>
+                <a href="#" class="service-item">
+                    <i class="fas fa-cube"></i>
+                    Minecraft Hosting
+                </a>
+            </div>
+            <a href="DISCORD_LINK_2" class="action-btn discord-btn">
+                <i class="fab fa-discord"></i> Technical Support
+            </a>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="service-card">
+            <div class="card-header">
+                <i class="fas fa-hourglass-half"></i>
+                <h2>Coming Soon</h2>
+            </div>
+            <p>New services exploding soon!</p>
+            <a href="DISCORD_LINK_3" class="action-btn discord-btn">
+                <i class="fab fa-discord"></i> Get Updates
+            </a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2023 Creeper Services</p>
+            <nav>
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            themeToggle.querySelector('i').classList.toggle('fa-moon');
+            themeToggle.querySelector('i').classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+</html>
