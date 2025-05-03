@@ -18,6 +18,8 @@
 
   gtag('config', 'G-YC2S042G3Z');
 </script>
+<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+
 </head>
 <body>
     <header class="main-header">
@@ -94,13 +96,23 @@
             <nav>
     <a href="https://www.patreon.com/c/creeper_scan/shop">💖 Donate or Motivate Me!</a>
 
-    <div class="dropdown">
-        <button class="dropbtn">Legal Info ▾</button>
-        <div class="dropdown-content">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
-        </div>
-    </div>
+            <!-- Dropdown Trigger -->
+            <div class="relative">
+                <button id="dropdownButton" data-dropdown-toggle="footerDropdown" class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">
+                    Legal Info
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div id="footerDropdown" class="hidden absolute bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow mt-2">
+                    <ul class="py-1" aria-labelledby="dropdownButton">
+                        <li><a href="/privacy" class="text-sm text-gray-700 block px-4 py-2 hover:bg-gray-100">Privacy Policy</a></li>
+                        <li><a href="/terms" class="text-sm text-gray-700 block px-4 py-2 hover:bg-gray-100">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
 </nav>
 
         </div>
