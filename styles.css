@@ -181,7 +181,6 @@ body {
     align-items: center;
 }
 
-/* CHANGED THIS RULE */
 .main-footer nav a {
     color: var(--text-color);
     text-decoration: none;
@@ -232,6 +231,7 @@ body {
     font-weight: bold;
 }
 
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -250,15 +250,18 @@ body {
         text-align: center;
     }
     
+    .main-footer .social-icons {
+        margin: 1rem 0;
+    }
+    
     .main-footer nav {
-        margin-top: 1rem;
+        margin-top: 0;
     }
     
     .main-header .social-icons {
         display: none;
     }
 
-    /* ADDED THIS RULE */
     .main-footer nav a {
         margin: 0.5rem;
     }
