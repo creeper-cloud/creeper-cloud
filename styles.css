@@ -27,6 +27,14 @@ body {
     transition: all 0.3s ease;
 }
 
+.branding-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -173,7 +181,8 @@ body {
     align-items: center;
 }
 
-.main-footer a {
+/* CHANGED THIS RULE */
+.main-footer nav a {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 1.5rem;
@@ -245,17 +254,12 @@ body {
         margin-top: 1rem;
     }
     
-    /* Add this rule to hide header icons on mobile */
     .main-header .social-icons {
         display: none;
     }
-}
 
-/* Add this rule to maintain title appearance */
-.branding-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    /* ADDED THIS RULE */
+    .main-footer nav a {
+        margin: 0.5rem;
+    }
 }
