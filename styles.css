@@ -188,6 +188,41 @@ body {
     padding: 0.5rem;
 }
 
+/* Social Icon Styles */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+/* QR Code Styles */
+.qr-code {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.qr-code img {
+    max-width: 200px;
+    border: 5px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+.qr-code p {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -209,9 +244,18 @@ body {
     .main-footer nav {
         margin-top: 1rem;
     }
+    
+    /* Add this rule to hide header icons on mobile */
+    .main-header .social-icons {
+        display: none;
+    }
 }
 
-
-
-
-
+/* Add this rule to maintain title appearance */
+.branding-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
