@@ -198,18 +198,9 @@ body {
 
 /* Social Icon Styles */
 .social-icons {
+    display: flex;
     gap: 1rem;
     align-items: center;
-}
-
-/* CORRECTED LOGIC: show in header by default */
-.main-header .social-icons {
-    display: flex;
-}
-
-/* CORRECTED LOGIC: hide in footer by default */
-.main-footer .social-icons {
-    display: none;
 }
 
 .social-icon {
@@ -240,7 +231,32 @@ body {
     font-weight: bold;
 }
 
-/* Responsive Styles for Mobile */
+/* --- LOGIC FOR ICON VISIBILITY --- */
+
+/* By default (on mobile), show footer icons and hide header icons */
+.main-footer .social-icons {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.main-header .social-icons {
+    display: none;
+}
+
+/* On screens larger than 768px (tablets and desktops) */
+@media (min-width: 769px) {
+    /* Show header icons */
+    .main-header .social-icons {
+        display: flex;
+    }
+
+    /* Hide footer icons */
+    .main-footer .social-icons {
+        display: none;
+    }
+}
+
+/* --- RESPONSIVE LAYOUT FOR MOBILE --- */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -258,20 +274,9 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
-    /* SHOW FOOTER ICONS ON MOBILE */
-    .main-footer .social-icons {
-        display: flex;
-        margin: 1rem 0;
-    }
-    
+
     .main-footer nav {
         margin-top: 0;
-    }
-    
-    /* HIDE HEADER ICONS ON MOBILE */
-    .main-header .social-icons {
-        display: none;
     }
 
     .main-footer nav a {
