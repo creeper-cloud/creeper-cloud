@@ -203,6 +203,11 @@ body {
     align-items: center;
 }
 
+/* HIDE FOOTER ICONS BY DEFAULT */
+.main-footer .social-icons {
+    display: none;
+}
+
 .social-icon {
     font-size: 1.5rem;
     color: var(--text-color);
@@ -250,7 +255,9 @@ body {
         text-align: center;
     }
     
+    /* SHOW FOOTER ICONS ON MOBILE */
     .main-footer .social-icons {
+        display: flex;
         margin: 1rem 0;
     }
     
@@ -258,6 +265,7 @@ body {
         margin-top: 0;
     }
     
+    /* HIDE HEADER ICONS ON MOBILE */
     .main-header .social-icons {
         display: none;
     }
