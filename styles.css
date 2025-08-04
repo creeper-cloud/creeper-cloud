@@ -198,12 +198,16 @@ body {
 
 /* Social Icon Styles */
 .social-icons {
-    display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-/* HIDE FOOTER ICONS BY DEFAULT */
+/* CORRECTED LOGIC: show in header by default */
+.main-header .social-icons {
+    display: flex;
+}
+
+/* CORRECTED LOGIC: hide in footer by default */
 .main-footer .social-icons {
     display: none;
 }
